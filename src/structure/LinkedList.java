@@ -16,21 +16,16 @@ public class LinkedList<T> {
         this.head = this.head.getNextNode();
     }
     
-//    public T length(){
-//        Node node = head;
-//        int count = 0;
-//        if(node.next == null){
-//            return null;
-//        }
-//        else{
-//            while(node.next != null){
-//                count++;
-//                node = node.next;
-//            }
-//            count++;
-//            return count;
-//        }
-//    }
+    public int length(){
+        int length = 0;
+        Node current = this.head;
+        while (current != null){
+            length++;
+            current = current.getNextNode();
+        }
+        
+        return length;
+    }
     
     public Node find(T x){
         Node current = this.head;
